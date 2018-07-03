@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileMovieDB.Views.MoviesPage"
+             Title="Movies">
+    
+    <StackLayout>
+        <SearchBar TextChanged="OnTextChanged"
+                   Placeholder="Search by title..."
+                   HeightRequest="35"/>
+
+        <ActivityIndicator IsRunning="{Binding IsSearching}" />
+
+        <Frame x:Name="notFound"
+               Padding="20"
+               HasShadow="false"
+               IsVisible="false">
+            <Label Text="No movies found matching your search."
+                   TextColor="Gray" />
+        </Frame>
+        
+        <ListView x:Name="moviesListView"
+                  ItemSelected="OnMovieSelected"
+                  IsVisible="false" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding PosterPath, StringFormat='https://image.tmdb.org/t/p/w92{0}'}"
+                               Text="{Binding Title}"
+                               Detail="{Binding ReleaseDate}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

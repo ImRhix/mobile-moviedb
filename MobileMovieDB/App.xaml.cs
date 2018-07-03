@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MobileMovieDB.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MobileMovieDB
@@ -11,7 +12,7 @@ namespace MobileMovieDB
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MoviesPage());
         }
 
         protected override void OnStart()

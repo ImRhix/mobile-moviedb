@@ -1,5 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MobileMovieDB.App">
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileMovieDB.App">
+
     <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Name="PrimaryColor">#01d277</Color>        <!-- Light Green  RGB: 1, 210, 119 -->
+            <Color x:Name="SecondaryColor">#081c24</Color>      <!-- Dark Blue    RGB: 8, 28, 36 -->
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
