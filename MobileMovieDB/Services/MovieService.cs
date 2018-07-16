@@ -49,7 +49,7 @@ namespace MobileMovieDB.Services
 
         /// <summary>
         /// Gets movies that have the exact same title as the one given as a parameter. Called upon tapping a row from the listview.
-        /// Correct way would be to find the movie by ID. That implies creating a new model, since an api call based on movieID returns a different json result.
+        /// Correct way would be to find the movie by ID and that implies creating a new model, since an api call based on movieID returns a different json result.
         /// </summary>
         public async Task<RootObject> GetMovie(string title)
         {
